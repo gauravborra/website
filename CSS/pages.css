@@ -1,0 +1,283 @@
+:root {
+  --primary: rgb(127, 218, 9);
+  --for2: #333;
+  --for: black;
+  --for1: #212121;
+  --background: #fff;
+  --bg1: #c9c9c9;
+  --mid: #808080;
+  --for:#000000;
+  --poppins: "Poppins", sans-serif;
+  --cormo: "Cormorant Garamond", serif;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.pagebody section {
+  padding: 10vh 10vw 10vh 10vw !important;
+}
+
+h5 {
+  display: inline-block;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heropages {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 0px;
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+}
+
+.heropages #carouselExampleIndicators {
+  z-index: 0;
+}
+
+.heropages #logo {
+  font-family: var(--poppins);
+  font-size: 3vw;
+  color: white;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+
+.heropages .heromenu {
+  position: absolute;
+  font-family: var(--poppins);
+  font-weight: 500;
+  font-size: 1 rem;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.heropages .heromenu #resume:hover {
+  color: var(--primary);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.heropages #scrolltext {
+  bottom: 20px;
+  text-align: end;
+  right: 50px;
+  font-size: 12px;
+  font-weight: 50;
+  color: var(--bg1);
+  z-index: 10;
+}
+
+.heropages #scroll {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  height: 200px;
+  width: 2px;
+  background-color: var(--mid);
+  z-index: 10;
+}
+
+.heropages #scroll2 {
+  left: 30px;
+  bottom: 20px;
+  height: 200px;
+  width: 2px;
+  background-color: var(--primary);
+  -webkit-animation: scroller 2s infinite ease-in-out;
+          animation: scroller 2s infinite ease-in-out;
+}
+
+@-webkit-keyframes scroller {
+  0% {
+    height: 0px;
+    -webkit-transform: translateY();
+            transform: translateY();
+  }
+  40% {
+    height: 200px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  60% {
+    height: 200px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    height: 0px;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
+
+@keyframes scroller {
+  0% {
+    height: 0px;
+    -webkit-transform: translateY();
+            transform: translateY();
+  }
+  40% {
+    height: 200px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  60% {
+    height: 200px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    height: 0px;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+}
+
+.heropages #About {
+  position: absolute;
+  top: 49vh;
+  right: -20px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.heropages #contact {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.heropages span:hover {
+  color: var(--primary);
+}
+
+.heropages .siconhero {
+  height: auto;
+  width: 20px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+.heropages .siconhero .hicon {
+  height: 20px;
+  width: 20px;
+  fill: var(--background);
+  margin: 15px 0;
+}
+
+.next:hover {
+  cursor: url(/Assets/png/right-arrow.png), 40px;
+}
+
+.subtitle {
+  margin: 0px;
+}
+
+.articles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 3vw;
+}
+
+.articles .pleft {
+  text-align: end;
+}
+
+.articles .articleheading {
+  font-size: 3vh;
+}
+
+.pheading {
+  font-family: var(--poppins);
+  color: var(--for2);
+  font-size: 10vh;
+  font-weight: 600;
+  text-align: center;
+  margin: 0px;
+}
+
+#scicomm #discovery {
+  background-color: #e06614;
+  color: white;
+}
+
+#scicomm #creation {
+  background-color: var(--for2);
+  color: var(--background);
+  height: 2000px;
+}
+
+#scicomm #implementation {
+  height: 2000px;
+}
+
+#scicomm .next {
+  background-color: var(--for1);
+  color: var(--background);
+  cursor: e-resize;
+}
+
+#scicomm .next h3 {
+  text-align: center;
+}
+
+#scicomm .next .pheading {
+  color: var(--mid);
+}
+
+#scicomm .next .pheading:hover {
+  color: var(--primary);
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: e-resize;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1024px) {
+  .articles {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 3vw;
+  }
+  .articles .pleft {
+    text-align: center;
+  }
+  .articles .pright {
+    text-align: center;
+  }
+  .articles .articleheading {
+    font-size: 3vh;
+  }
+  .pheading {
+    font-size: 5vh;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=pages.css.map */

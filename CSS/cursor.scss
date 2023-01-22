@@ -1,0 +1,116 @@
+.cursormain{
+    height: 2rem;
+    width: 2rem;
+    // border: 2px solid var(--primary);
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    z-index: 50;
+    transition: all .1s;
+    pointer-events: none;
+    transform-origin: 100% 100%;
+    mix-blend-mode: difference;
+    p{
+    opacity: 0; 
+    }
+    }
+    
+    .cursorsmall{
+     height: 10px;
+     width: 10px;
+     border-radius:50%;
+     position: absolute;
+     background-color: var(--primary);
+     transform: translate(-50%,-50%);
+     mix-blend-mode: difference;
+     z-index: 50;
+     pointer-events: none;
+    }
+    
+    .cursorsmallhide{
+    opacity: 0;
+    }
+    .heromenu:hover .cursorsmall{
+      opacity: 0;
+    }
+    
+    .link-grow{
+      height: 10rem;
+      width: 10rem;
+      background-color:var(--primary);
+      // background-color:white;
+      border: none;
+      transform-origin: 70% 70%;
+      transform-origin: center;
+      mix-blend-mode: normal;
+      // mix-blend-mode: difference;
+      
+      animation: pulse2 0.5s  infinite  alternate ;
+      @keyframes pulse2{
+        from{
+          ;
+         box-shadow: 0px 0px 0px 0px rgba(127, 218, 9, 1) ;
+        }
+        to{
+          box-shadow: 0px 0px 0px 20px rgba(127, 218, 9, .5)  ;
+        }
+      }
+      
+    }
+    .hovered-link{
+    transform: scale(1.2);
+    color:white;
+    z-index: 100;
+    animation: rotatelink 5s linear infinite;
+    
+    @keyframes rotatelink {
+      from{
+        transform: rotate(0deg);
+      }
+      to{
+        transform: rotate(360deg);
+      }
+    }
+    
+    }
+    
+    .icon-grow{
+      transform: scale(2);
+      transform-origin: 100% 100%;
+      background-color:var(--primary);
+      mix-blend-mode: normal;
+      border:none;
+      animation: pulse infinite 1s;
+      animation-direction:alternate;
+      @keyframes pulse{
+        from{
+          ;
+         box-shadow: 0px 0px 0px 0px rgba(127, 218, 9, 1) ;
+        }
+        to{
+          box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, .5)  ;
+        }
+      }
+    }
+    
+    .hovered-icon{
+      transform: scale(1.5);
+      position: relative;
+      z-index:100;
+      
+    }
+    
+    .ripple{
+      animation: pulse 0.5s  2 alternate ;
+      @keyframes pulse{
+        from{
+          ;
+         box-shadow: 0px 0px 0px 0px rgba(127, 218, 9, 1) ;
+        }
+        to{
+          box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, .5)  ;
+        }
+      }
+    }
+    

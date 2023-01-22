@@ -1,0 +1,163 @@
+:root {
+  --primary: rgb(127, 218, 9);
+  --secondary: rgb(96, 168, 1);
+  --for2: #333;
+  --for: black;
+  --for1: #212121;
+  --background: #fff;
+  --bg1: #ececec;
+  --bg2: #c6c6c6;
+  --mid: #808080;
+  --for:#000000;
+  --poppins: "Roboto", sans-serif;
+  --cormo: "Cormorant Garamond", serif;
+  --snapred:#FF2341;
+}
+
+.logo {
+  position: absolute;
+  background-image: url(/Assets/png/GB-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  color: var(--background);
+  top: 20px;
+  left: 0px;
+  padding: 20px 20px !important;
+  margin: 30px;
+  z-index: 9999;
+}
+
+#logofixed {
+  color: var(--mid);
+  position: fixed;
+  mix-blend-mode: difference;
+  z-index: 9990;
+}
+
+html {
+  overflow: auto;
+}
+
+html, body, div, iframe {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  border: none;
+}
+
+.figma-case {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.figmafoot {
+  height: 5.2vh;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 99999;
+  bottom: 0px;
+}
+
+.figmafoot span {
+  opacity: 0;
+  font-family: var(--poppins);
+  color: var(--bg2);
+  margin: 0px 20px;
+}
+
+.figmafoot svg {
+  fill: var(--bg2);
+}
+
+.float-left {
+  float: left;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  justify-self: end;
+}
+
+.float-right {
+  float: right;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.float-center {
+  position: relative;
+}
+
+.prevwork {
+  margin: 1.3vh 20vh;
+}
+
+.nextwork {
+  margin: 1.3vh 20vh;
+}
+
+.nextwork:hover span {
+  color: var(--primary);
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.prevwork:hover span {
+  color: var(--primary);
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+a:hover span {
+  color: var(--primary);
+}
+
+a:hover svg {
+  fill: var(--primary);
+}
+
+@media (min-width: 1025px) {
+  .hidden-l {
+    display: none;
+  }
+  .hidden-m {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hidden-m {
+    display: none;
+  }
+  .hidden-l {
+    display: block;
+  }
+  .figmafoot {
+    height: 7vh;
+  }
+  .figmafoot svg {
+    fill: var(--mid);
+  }
+  .figmafoot span {
+    opacity: 1;
+    color: var(--mid);
+  }
+  .prevwork {
+    margin: 2vh 2vh;
+  }
+  .nextwork {
+    margin: 2vh 2vh;
+  }
+  #logofixed {
+    display: none;
+  }
+}
+/*# sourceMappingURL=cases.css.map */

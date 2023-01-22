@@ -1,0 +1,42 @@
+.parallax_card {
+  display: none;
+}
+
+.parallaxcontainer {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  -webkit-perspective: 1200px;
+          perspective: 1200px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translatez(35px);
+          transform: translatez(35px);
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+  text-align: center;
+}
+
+.parallax_fore {
+  height: 110%;
+  position: relative;
+}
+
+.parallax_bg {
+  bottom: -50px;
+  text-align: center;
+  left: -50px;
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  overflow: hidden;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: translateZ(-50px);
+          transform: translateZ(-50px);
+  z-index: 0;
+}
+/*# sourceMappingURL=mousemove_parallax.css.map */

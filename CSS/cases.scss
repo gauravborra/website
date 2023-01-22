@@ -1,0 +1,255 @@
+:root {
+    --primary: rgb(127, 218, 9);
+    --secondary: rgb(96, 168, 1);
+    --for2: #333;
+    --for: black;
+    --for1: #212121;
+    --background: #fff;
+    --bg1: #ececec;
+    --bg2: #c6c6c6;
+    --mid: #808080;
+    --for:#000000;
+    --poppins: "Roboto", sans-serif;
+    --cormo: "Cormorant Garamond", serif;
+    --snapred:#FF2341;
+  }
+
+// .heropages{
+//     // box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+//     background-size: cover;
+//     background-position-x: right;
+//     height: 80vh !important; 
+// }
+
+// .hero-sevac {
+//     background-image: url(/Assets/img/Cases/Sevac/sevac-cover.jpg);    
+// }
+
+.logo {
+    position: absolute;
+    background-image: url(/Assets/png/GB-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat ;
+    width:30px;
+    color: var(--background);
+    top:20px;
+    left: 0px;
+    padding: 20px 20px !important;
+    margin: 30px;
+    z-index: 9999;
+  }
+
+  #logofixed{
+    color: var(--mid);
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 9990;
+  }
+
+// #case-info{
+// min-height :20vh;
+// padding: 4vh 10vw 4vh 10vw ;
+// }
+
+// .case-info{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr 1fr;
+//     grid-gap:2vw;
+// }
+// #overview{
+//   position: relative;  
+// }
+// .pagenumber{
+//  position: absolute;
+//  top:10vh;
+//  font-size: 50vh; 
+//  z-index: -1;  
+// }
+// .over-flex{
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// align-items: flex-start;
+// padding: 7.2vh;
+// background: #FFFFFF;
+// box-shadow: 10px 10px 74px rgba(0, 0, 0, 0.08);
+// border-radius: 48px;
+// width: 40vw; 
+
+// }
+// .over-grid{
+// display: grid;
+// grid-template-columns: 1fr 1fr;
+// grid-column-gap: 6vh;
+// grid-row-gap: 20vh;
+
+
+// }
+// .clay-mobile{
+// position: relative;
+// filter: drop-shadow(40px 40px 96px rgba(0, 0, 0, 0.25));
+// // background-image: url(/Assets/img/mock/White-no-Shadow.png);    
+// .frame{
+//    position: absolute; 
+// }
+
+// .screen{
+
+//    padding: 19px 0px 0px 23px ;
+
+// }
+// }
+
+html 
+{
+ overflow: auto;
+}
+ 
+html, body, div, iframe 
+{
+ margin: 0px; 
+ padding: 0px; 
+ height: 100%; 
+ border: none;
+}
+
+.figma-case{
+    display: block; 
+    width: 100%; 
+    height: 100vh;
+    border: none; 
+    overflow-y: auto; 
+    overflow-x: hidden;   
+}
+
+.figmafoot{
+   height: 5.2vh;
+   width: 100%; 
+   background-color:black;
+   position: fixed;
+   z-index: 99999;
+   bottom: 0px;
+   span{
+    opacity: 0;
+    font-family: var(--poppins);
+    // font-size: 2.4vh;
+    // line-height: 24px;
+    color:var(--bg2);
+    margin: 0px 20px;
+   }
+   svg{
+    fill:var(--bg2)
+   }
+}
+
+.float-left{
+    float: left;
+    display: inline-flex;
+    justify-self: end;
+}
+.float-right{
+    float: right;
+    display: inline-flex;
+}
+.float-center{
+    position: relative;
+}
+
+// .workcta{
+// position:absolute;
+// text-align: center; 
+// left: 50%;
+// top: 50%;
+// transform: translate(-50%,-50%);   
+// }
+.prevwork{
+ margin: 1.3vh 20vh;
+}
+.nextwork{
+    margin: 1.3vh 20vh;
+}
+
+// .prevwork svg :hover{
+// fill:var(--primary);
+// color: var(--primary);
+// }
+// .prevwork:hover span {
+//     fill:var(--primary);
+//     color: var(--primary);
+// }
+// .prevwork:hover svg {
+//     fill:var(--primary);
+// }
+// .nextwork:hover span {
+//     fill:var(--primary);
+//     color: var(--primary);
+// }
+// .nextwork:hover svg {
+//     fill:var(--primary);
+// }
+
+.nextwork:hover span {
+        color: var(--primary);
+        opacity: 1;
+        transition: 0.2s;
+}
+.prevwork:hover span {
+    color: var(--primary);
+    opacity: 1;
+    transition: 0.2s;
+
+}
+
+a:hover span {
+        color: var(--primary);
+
+    }
+a:hover svg {
+    fill:var(--primary);
+
+}
+
+
+@media (min-width: 1025px){
+
+.hidden-l{
+    display: none;
+} 
+.hidden-m{
+    display: block;
+}   
+
+}
+@media (max-width: 1024px){
+
+.hidden-m{
+  display: none;  
+}
+.hidden-l{
+    display: block;  
+}
+.figmafoot{
+    height:7vh;
+    svg{
+    fill: var(--mid);
+    }
+    span{
+    opacity: 1;
+    color:var(--mid);
+
+    }
+}
+.prevwork{
+  
+    margin: 2vh 2vh;
+
+   }
+.nextwork{
+   
+    margin: 2vh 2vh;
+
+}
+#logofixed{
+    display: none;
+}
+}

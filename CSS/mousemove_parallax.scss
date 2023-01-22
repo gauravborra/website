@@ -1,0 +1,34 @@
+.parallax_card{
+    display: none;
+  
+  }
+
+.parallaxcontainer{     
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      perspective: 1200px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: translatez(35px);
+      transition: transform 200ms ease-out;
+      text-align: center;  
+  }
+  .parallax_fore{
+      height: 110%;
+      position: relative;
+  
+  }
+   .parallax_bg{
+      bottom: -50px;
+      text-align: center;
+      left: -50px;
+      position: absolute;
+      right: -50px;
+      top: -50px;
+      overflow: hidden;
+      transform-origin: 50% 50%;
+      transform: translateZ(-50px);
+      z-index: 0;
+   }
+

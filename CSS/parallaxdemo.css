@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+body {
+  margin: 0;
+  background-color: #1d1e22;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+#product #parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
+}
+
+#product h1 {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Arial";
+  text-transform: uppercase;
+  opacity: .2;
+  font-size: 70px;
+}
+
+#product #parallax2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
+}
+
+#product h2 {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Arial";
+  text-transform: uppercase;
+  opacity: .2;
+  font-size: 70px;
+}
+
+#product #simpleparallax .simpleparallaxdemo {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
+}
+
+#product #simpleparallax .simpleparallaxdemo h2 {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Arial";
+  text-transform: uppercase;
+  opacity: .2;
+  font-size: 70px;
+}
+
+#cardwala {
+  display: none;
+}
+
+#cardwala html, #cardwala body {
+  height: 100%;
+}
+
+#cardwala body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #642B73;
+  background: -webkit-gradient(linear, left top, left bottom, from(#C6426E), to(#642B73));
+  background: linear-gradient(to bottom, #C6426E, #642B73);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Open Sans', sans;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  -webkit-perspective: 1800px;
+          perspective: 1800px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+#cardwala h1 {
+  color: #3e3e42;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  -webkit-transform: translateZ(35px);
+          transform: translateZ(35px);
+}
+
+#cardwala h3 {
+  color: #eb285d;
+  font-size: 16px;
+  margin-bottom: 6px;
+  -webkit-transform: translateZ(25px);
+          transform: translateZ(25px);
+}
+
+#cardwala .card {
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  height: 250px;
+  overflow: hidden;
+  -webkit-perspective: 1200px;
+          perspective: 1200px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translatez(35px);
+          transform: translatez(35px);
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+  width: 500px;
+  text-align: center;
+}
+
+#cardwala .card:not(:last-child) {
+  margin-right: 30px;
+}
+
+#cardwala .card__img {
+  position: relative;
+  height: 100%;
+}
+
+#cardwala .card__bg {
+  bottom: -50px;
+  left: -50px;
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: translateZ(-50px);
+          transform: translateZ(-50px);
+  z-index: 0;
+}
+
+#cardwala .card__one .card__img {
+  top: 14px;
+  right: -10px;
+  height: 110%;
+}
+
+#cardwala .card__one .card__bg {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_monobg.jpg") center/cover no-repeat;
+}
+
+#cardwala .card__two .card__img {
+  top: 25px;
+}
+
+#cardwala .card__two .card__bg {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_spirited.jpg") center/cover no-repeat;
+}
+
+#cardwala .card__three .card__img {
+  top: 5px;
+  left: -4px;
+  height: 110%;
+}
+
+#cardwala .card__three .card__bg {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_howlbg.jpg") center/cover no-repeat;
+}
+
+#cardwala .card__text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.55)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 100%);
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 70px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+#cardwala .card__title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0 10px;
+  margin-bottom: 3px;
+}
+
+#cardwala .notice {
+  background: gold;
+  border-top-left-radius: 6px;
+  bottom: 0;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 8px 10px;
+  position: absolute;
+  right: -20px;
+}
+
+#cardwala2 {
+  height: 100vh;
+  width: 100vw;
+}
+
+#cardwala2 .card {
+  background-color: yellow;
+  height: 40vw;
+  width: 100vw;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+  text-align: center;
+}
+
+#cardwala2 .card__img {
+  top: 14px;
+  right: -10px;
+  height: 110%;
+  margin: 100px;
+}
+
+#cardwala2 .card__bg {
+  bottom: -50px;
+  left: -50px;
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+  z-index: 0;
+  background: url(/Assets/img/me_bg.png);
+  background-size: cover;
+}
+
+.parallax_card {
+  display: none;
+}
+
+.parallaxcontainer {
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+  text-align: center;
+}
+
+.parallax_fore {
+  height: 110%;
+  position: relative;
+}
+
+.parallax_bg {
+  bottom: -50px;
+  left: -50px;
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+  z-index: 0;
+  background: url(/Assets/img/me_bg.png);
+  background-size: cover;
+}
+/*# sourceMappingURL=parallaxdemo.css.map */

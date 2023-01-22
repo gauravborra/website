@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/mousemove_parallax.css">
+    <link rel="stylesheet" href="/CSS/main.css">
+</head>
+<body>
+    
+    <section id="who">
+        <H1 class="heading">Who am I ?</H1>
+       
+        <div id="aboutme" class="higher">
+            <div class="parallax_card"></div>
+            <div class="parallaxcontainer">
+                <div class="parallax_bg"> </div>
+                <img class="parallax_fore" src="/Assets/img/ME.png">
+            </div>
+        
+          <div class="aboutme"> 
+            <p class="subhead higher"> <Br>I am a Designer with main focus on 
+            PRODUCT DESIGN,
+            INTERACTION DESIGN
+            and BRANDING</p> 
+          </div>
+      </div>
+    
+      </section> 
+
+      <div id="parallax"><h1>Parallax</h1></div> 
+    
+<section id="parallax2">
+    
+    <h2>Parallax 2</h2>
+
+
+</section>
+<section id="simpleparallax">
+    <div class="simpleparallaxdemo">
+        <h2>Parallax 3</h2>
+    </div> 
+
+</section>
+
+<section id="cardwala" class="cardwala">
+    <div class="cards" >
+
+        <div class="card card__one">
+          <div class="card__bg"></div>
+          <img class="card__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" />
+          <div class="card__text">
+            <p class="card__title">Princess Mononoke</p>
+          </div>
+        </div>
+
+      </div>
+    
+</section>
+
+<section id="cardwala2" >
+        
+        <div class="card">
+          <div class="card__bg">
+          <img class="card__img" src="/Assets/img/ME.png">
+        </div>
+        </div>
+      
+    
+</section>
+
+
+<script>
+const cards = document.querySelector(".cards");
+const images = document.querySelectorAll(".card__img");
+const backgrounds = document.querySelectorAll(".card__bg");
+const range = 40;
+
+// const calcValue = (a, b) => (((a * 100) / b) * (range / 100) -(range / 2)).toFixed(1);
+const calcValue = (a, b) => (a/b*range-range/2).toFixed(1) // thanks @alice-mx
+
+let timeout;
+document.addEventListener('mousemove', ({x, y}) => {
+  if (timeout) {
+    window.cancelAnimationFrame(timeout);
+  }
+  	
+  timeout = window.requestAnimationFrame(() => {
+    const yValue = calcValue(y, window.innerHeight);
+    const xValue = calcValue(x, window.innerWidth);
+
+    cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+
+    [].forEach.call(images, (image) => {
+      image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+    });
+
+    [].forEach.call(backgrounds, (background) => {
+      background.style.backgroundPosition = `${xValue*.45}px ${-yValue*.45}px`;
+    })
+	})
+}, false);
+</script>
+
+<script>
+var image = document.getElementsByClassName('simpleparallaxdemo');
+new simpleParallax(simpleparallaxdemo);
+
+
+</script>
+<script>
+(function() {
+    // Add event listener
+    document.addEventListener("mousemove", parallax);
+    const elem = document.querySelector("#parallax");
+
+    // Magic happens here
+    function parallax(e) {
+        let _w = window.innerWidth/2;
+        let _h = window.innerHeight/2;
+        let _mouseX = e.clientX;
+        let _mouseY = e.clientY;
+        let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+        let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+        let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+        let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+        console.log(x);
+        elem.style.backgroundPosition = x;
+    }
+
+})();
+
+</script>
+
+        <script src="/JS/mousemoveparallax.js"></script>
+ 
+</body>
+</html>
