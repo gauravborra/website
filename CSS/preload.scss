@@ -78,7 +78,9 @@ body {
     
     H1{
     animation: introname 4s linear forwards;
-    font-family: var(--poppins);
+    font-family: var(--cormo);
+    font-size:8vw ;
+    font-style: italic;
     font-weight: 700;
     animation-delay:1.3s;
     opacity: 0;
@@ -150,7 +152,7 @@ body {
 #introtext{
 H1{
     font-size: 11vw ;
-    line-height: 0vh; 
+    line-height: 100%; 
     color: var(--primary);
     white-space: nowrap;  
 }

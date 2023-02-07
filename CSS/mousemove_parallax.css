@@ -6,17 +6,11 @@
   overflow: hidden;
   position: relative;
   display: inline-block;
-  -webkit-perspective: 1200px;
-          perspective: 1200px;
+  perspective: 1200px;
   position: relative;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: translatez(35px);
-          transform: translatez(35px);
-  -webkit-transition: -webkit-transform 200ms ease-out;
-  transition: -webkit-transform 200ms ease-out;
+  transform-style: preserve-3d;
+  transform: translatez(35px);
   transition: transform 200ms ease-out;
-  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
   text-align: center;
 }
 
@@ -33,10 +27,7 @@
   right: -50px;
   top: -50px;
   overflow: hidden;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transform: translateZ(-50px);
-          transform: translateZ(-50px);
+  transform-origin: 50% 50%;
+  transform: translateZ(-50px);
   z-index: 0;
-}
-/*# sourceMappingURL=mousemove_parallax.css.map */
+}/*# sourceMappingURL=mousemove_parallax.css.map */

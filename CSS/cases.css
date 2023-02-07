@@ -63,30 +63,24 @@ html, body, div, iframe {
   z-index: 99999;
   bottom: 0px;
 }
-
 .figmafoot span {
   opacity: 0;
   font-family: var(--poppins);
   color: var(--bg2);
   margin: 0px 20px;
 }
-
 .figmafoot svg {
   fill: var(--bg2);
 }
 
 .float-left {
   float: left;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   justify-self: end;
 }
 
 .float-right {
   float: right;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
@@ -105,14 +99,12 @@ html, body, div, iframe {
 .nextwork:hover span {
   color: var(--primary);
   opacity: 1;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 .prevwork:hover span {
   color: var(--primary);
   opacity: 1;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -132,7 +124,6 @@ a:hover svg {
     display: block;
   }
 }
-
 @media (max-width: 1024px) {
   .hidden-m {
     display: none;
@@ -159,5 +150,4 @@ a:hover svg {
   #logofixed {
     display: none;
   }
-}
-/*# sourceMappingURL=cases.css.map */
+}/*# sourceMappingURL=cases.css.map */

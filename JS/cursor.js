@@ -10,7 +10,6 @@ let customLinks = document.querySelectorAll('.custlinks');
 let glowText = document.querySelectorAll('.cursorglow');
 
 
-
 window.addEventListener("mousemove",cursor);
 
 function cursor(e) {
@@ -69,6 +68,7 @@ viewCursor.forEach(view => {
 
   });
   });
+
 
 
 buttonLink.forEach(butlink => {
