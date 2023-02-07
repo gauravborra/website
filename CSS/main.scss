@@ -8,8 +8,7 @@
   --bg1: #ececec;
   --bg2: #c6c6c6;
   --mid: #808080;
-  --for:#000000;
-  --poppins: "Manrope", sans-serif;
+  --poppins: 'Manrope', sans-serif;
   --cormo: "Cormorant Garamond", serif;
   --snapred:#FF2341;
 }
@@ -22,9 +21,9 @@ html,body {
  font: var(--poppins);
  background-color: var(--background);
 }
-.overflow-hidden{
+.no-scroll{
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 #__framer-badge-container{
@@ -43,7 +42,7 @@ transition: .1s;
 // transition-property: height,width;
 pointer-events: none;
 overflow: hidden;
-mix-blend-mode: normal;
+mix-blend-mode: difference;
   p{
   opacity: 0;
   }
@@ -86,6 +85,25 @@ opacity: 0;
   opacity: 1;
 }
 
+
+// .glowcursorb{
+//   height: 128px;
+//   width: 128px;
+//  background-color:var(--primary);
+//  border-radius: 50%; 
+//  position:absolute;
+//  transform: translate(-50%,-50%);
+//  mix-blend-mode: multiply;
+//  z-index: 1;
+//  pointer-events: none;
+//  opacity: 0;
+// }
+
+.glowcursorshowb{
+  opacity: 1;
+  mix-blend-mode: multiply;
+}
+
 .navlink-grow{
   height: 10rem;
   width: 10rem;
@@ -96,7 +114,7 @@ opacity: 0;
   transform-origin: center;
 
   overflow: hidden;
-//  mix-blend-mode: difference;
+  mix-blend-mode: normal;
   
   animation: pulse2 0.5s  infinite  alternate ;
   @keyframes pulse2{
@@ -269,7 +287,9 @@ button {
   color: #fff;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #333;
+  font-family: var(--poppins);
+  font-weight: 400;
+  background-color: var(--for);
   justify-items: center;
   text-align: center;
   vertical-align: center;
@@ -297,7 +317,8 @@ transition: .2s;
 #hero {
   height: 100vh;
   width: 100%;
-  background-color: var(--for1);
+  // background-color: var(--for1);
+  background-color: var(--for);
   padding: 0px;
 
  #defaulttext{
@@ -687,7 +708,7 @@ opacity: 1;
   height: auto;
   width: auto;
   position: relative;
-  background-color: var(--for2);
+  background-color: var(--for);
 
 
 
@@ -695,6 +716,8 @@ opacity: 1;
     text-align: center;
     color: var(--background);
     margin-top: 3vw;
+    font-family: var(--poppins);
+    font-weight: 300;
   }
 
   text-align: center;
@@ -702,7 +725,7 @@ opacity: 1;
 
 
 .recent-work{
-  background-color: var(--for2);
+  background-color: var(--for);
   position: relative;
   text-align: center;
   padding: 0 0 8vw 0;
@@ -713,8 +736,8 @@ opacity: 1;
     display: none !important;
   }
   .ticker{
-    margin-top:-8vh;
-    height: 50vw; 
+    margin: -8vh 0 8vh 0;
+    height: 625px; 
   }
 }
 
@@ -737,7 +760,7 @@ opacity: 1;
 }
 .skill {
   position: relative;
-  height: 12vh;
+  height: 10vh;
   width: auto;
   align-self: center;
   text-align: start;
@@ -746,11 +769,11 @@ opacity: 1;
     display: inline-block;
     vertical-align: middle;
     font-size: 2vw;
-    margin: 30px 0 30px 0px;
+    // margin: 30px 0 30px 0px;
   }
   .skillhide {
     position: absolute;
-    height: 10px;
+    height: 4px;
     width: 100%;
     bottom: 0px;
     background-color: var(--bg1);
@@ -976,7 +999,7 @@ a{
   #hero {
     height:100%;
     width: 100%;
-    background-color: var(--for1);
+
     padding: 0px;
     #herocentermain{
       width: 100%;
@@ -1040,7 +1063,6 @@ a{
   #who {
     height: auto;
     #aboutme {
-      margin-top: 50px;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: auto;
@@ -1124,7 +1146,6 @@ a{
 
   }
   .recent-work{
-    background-color: var(--for2);
     position: relative;
     text-align: center;
     padding: 0 0 8vw 0;
@@ -1132,8 +1153,8 @@ a{
     color: white;
     }
     .ticker{
-      margin-top:-8vh;
-      height: 52vh; 
+      margin: 0 0 4vh 0;
+      height: 304px; 
     }
   }
 
@@ -1232,6 +1253,8 @@ a{
     position: relative;
     height: auto;
     text-align: center;
+    background-color: var(--for);
+    
 
   
     #hobbies {
@@ -1287,7 +1310,7 @@ a{
   height: 30vh;
   width: 100%;
   text-align: center;
-  background-color: var(--for1);
+  background-color: var(--for);
   color: var(--background);
   span{
     color: var(--primary);
@@ -1388,6 +1411,10 @@ a{
       }
     }
   }
+  .interest{
+    margin: 10vh 0; 
+    color: white;
+   }
 
   footer {
     height: 14vh;
@@ -1801,7 +1828,7 @@ transform: translateX(-50%) scale(100);
       display: inline-block;
       vertical-align: middle;
       font-size: 2vh;
-      margin: 30px 0 30px 0px;
+      // margin: 30px 0 30px 0px;
     }
   }
   .skill {
@@ -1814,7 +1841,7 @@ transform: translateX(-50%) scale(100);
   
     .skillhide {
       position: absolute;
-      height: 10px;
+      height: 4px;
       width: 100%;
       bottom: 0px;
       background-color: var(--bg1);
@@ -1899,9 +1926,11 @@ transform: translateX(-50%) scale(100);
 
   #love {
     position: relative;
-    background-color: var(--for1);
+    background-color: var(--for);
     text-align: center;
-    
+    .glowcursor{
+      mix-blend-mode: multiply;
+    }
     h2,span {
     color: white;
     }
@@ -1918,7 +1947,7 @@ transform: translateX(-50%) scale(100);
     }
 
     .ticker-love{
-      height: 50vw;
+      height: 620px;
     }
 
     .hobby:nth-child(odd) {
@@ -1990,7 +2019,7 @@ transform: translateX(-50%) scale(100);
   height: 30vh;
   width: 100%;
   text-align: center;
-  background-color: var(--for1);
+  background-color: var(--for);
   color: var(--background);
   span{
     color: var(--primary);
@@ -2217,7 +2246,7 @@ svg{
     grid-gap: 20px;
 
     .skill{
-    height: 12vh;
+    height: 10vh;
     }
   }
 

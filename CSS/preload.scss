@@ -12,13 +12,19 @@
 //   }
 
 body {
-    background-color: --bac;     
-  }
+    background-color: --bac; 
+}
 
   .preload{
-    animation: scrollhide 5s linear 1 forwards;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
   }
-  
+
+  .scrollactive{
+   overflow: visible;
+  }
+
   .preload-end{ 
     opacity: 0;
     transition: opacity 1s;
@@ -38,6 +44,27 @@ body {
     }
   }
 
+  .loader{
+  height: 72px;
+  width: 72px;
+  position: fixed;
+  bottom: 24px;
+  opacity: 0;
+  animation: loader 1s linear 5s 1 forwards ;
+  left:50%;
+  transform:translateX(-50%);
+ }
+
+@keyframes loader {
+  from{
+opacity: 0;
+  }
+  to{ 
+opacity: 1;
+  }
+}
+
+
 
   #preload-test{
     background-color: red;
@@ -54,7 +81,7 @@ body {
     position: fixed;
     background-color:var(--for);
     color: white;
-    z-index: 100;
+    z-index: 150;
     overflow: hidden;
     text-align: center;
     opacity: 1;
@@ -79,7 +106,7 @@ body {
     H1{
     animation: introname 4s linear forwards;
     font-family: var(--cormo);
-    font-size:8vw ;
+    // font-size:7vw;
     font-style: italic;
     font-weight: 700;
     animation-delay:1.3s;
@@ -151,16 +178,16 @@ body {
 
 #introtext{
 H1{
-    font-size: 11vw ;
+    font-size: 8vh ;
     line-height: 100%; 
     color: var(--primary);
     white-space: nowrap;  
 }
 H3{
-    font-size: 7vw ;
+    font-size: 4vh ;
 }
 p{
-  font-size: 6vw;
+  font-size: 4vh;
   font-weight: 700;
     white-space: nowrap;  
 }
@@ -193,6 +220,7 @@ p{
   #introtext{
     H1{
         margin: 0px;
+        font-size:7vw;
     
     }
     H3{

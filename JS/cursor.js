@@ -8,7 +8,7 @@ let buttonLink = document.querySelectorAll('.buttonlink');
 let hyperLinks = document.querySelectorAll('.links');
 let customLinks = document.querySelectorAll('.custlinks');
 let glowText = document.querySelectorAll('.cursorglow');
-
+let glowbText = document.querySelectorAll('.cursorglowb');
 
 window.addEventListener("mousemove",cursor);
 
@@ -114,20 +114,26 @@ customLinks.forEach(butlink => {
 
   glowText.forEach(glow => {
     glow.addEventListener("mouseleave",() =>{
-    glowCursor.classList.remove("cursorglow")
+    // glowCursor.classList.remove("cursorglow")
     glowCursor.classList.remove("glowcursorshow");
 
-
-  
   });
     glow.addEventListener("mouseover",() => {
-    glowCursor.classList.add("cursorglow")
+    // glowCursor.classList.add("cursorglow")
     glowCursor.classList.add("glowcursorshow");
-
-
-   
   });
   });
+
+
+glowbText.forEach(glowb => {
+    glowb.addEventListener("mouseleave",() =>{
+    glowCursor.classList.remove("glowcursorshowb");
+  });
+    glowb.addEventListener("mouseover",() => {
+    glowCursor.classList.add("glowcursorshowb");
+
+  });
+ });
 
 
 

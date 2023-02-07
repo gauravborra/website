@@ -8,7 +8,6 @@
   --bg1: #ececec;
   --bg2: #c6c6c6;
   --mid: #808080;
-  --for:#000000;
   --poppins: "Manrope", sans-serif;
   --cormo: "Cormorant Garamond", serif;
   --snapred:#FF2341;
@@ -23,9 +22,9 @@ html, body {
   background-color: var(--background);
 }
 
-.overflow-hidden {
+.no-scroll {
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 #__framer-badge-container {
@@ -43,7 +42,7 @@ html, body {
   transition: 0.1s;
   pointer-events: none;
   overflow: hidden;
-  mix-blend-mode: normal;
+  mix-blend-mode: difference;
 }
 .cursormain p {
   opacity: 0;
@@ -86,6 +85,11 @@ html, body {
   opacity: 1;
 }
 
+.glowcursorshowb {
+  opacity: 1;
+  mix-blend-mode: multiply;
+}
+
 .navlink-grow {
   height: 10rem;
   width: 10rem;
@@ -94,6 +98,7 @@ html, body {
   z-index: 49;
   transform-origin: center;
   overflow: hidden;
+  mix-blend-mode: normal;
   -webkit-animation: pulse2 0.5s infinite alternate;
           animation: pulse2 0.5s infinite alternate;
 }
@@ -280,7 +285,9 @@ button {
   color: #fff;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #333;
+  font-family: var(--poppins);
+  font-weight: 400;
+  background-color: var(--for);
   justify-items: center;
   text-align: center;
   vertical-align: center;
@@ -307,7 +314,7 @@ button:hover {
 #hero {
   height: 100vh;
   width: 100%;
-  background-color: var(--for1);
+  background-color: var(--for);
   padding: 0px;
   /*
   @keyframes scroller {
@@ -770,17 +777,19 @@ button:hover {
   height: auto;
   width: auto;
   position: relative;
-  background-color: var(--for2);
+  background-color: var(--for);
   text-align: center;
 }
 #what h2 {
   text-align: center;
   color: var(--background);
   margin-top: 3vw;
+  font-family: var(--poppins);
+  font-weight: 300;
 }
 
 .recent-work {
-  background-color: var(--for2);
+  background-color: var(--for);
   position: relative;
   text-align: center;
   padding: 0 0 8vw 0;
@@ -792,8 +801,8 @@ button:hover {
   display: none !important;
 }
 .recent-work .ticker {
-  margin-top: -8vh;
-  height: 50vw;
+  margin: -8vh 0 8vh 0;
+  height: 625px;
 }
 
 #skills {
@@ -815,7 +824,7 @@ button:hover {
 
 .skill {
   position: relative;
-  height: 12vh;
+  height: 10vh;
   width: auto;
   align-self: center;
   text-align: start;
@@ -824,11 +833,10 @@ button:hover {
   display: inline-block;
   vertical-align: middle;
   font-size: 2vw;
-  margin: 30px 0 30px 0px;
 }
 .skill .skillhide {
   position: absolute;
-  height: 10px;
+  height: 4px;
   width: 100%;
   bottom: 0px;
   background-color: var(--bg1);
@@ -1146,7 +1154,6 @@ button:hover {
   #hero {
     height: 100%;
     width: 100%;
-    background-color: var(--for1);
     padding: 0px;
   }
   #hero #herocentermain {
@@ -1200,7 +1207,6 @@ button:hover {
     height: auto;
   }
   #who #aboutme {
-    margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -1267,7 +1273,6 @@ button:hover {
     transform: translate(-50%, -50%);
   }
   .recent-work {
-    background-color: var(--for2);
     position: relative;
     text-align: center;
     padding: 0 0 8vw 0;
@@ -1276,8 +1281,8 @@ button:hover {
     color: white;
   }
   .recent-work .ticker {
-    margin-top: -8vh;
-    height: 52vh;
+    margin: 0 0 4vh 0;
+    height: 304px;
   }
   #skills {
     min-height: 760px;
@@ -1369,6 +1374,7 @@ button:hover {
     position: relative;
     height: auto;
     text-align: center;
+    background-color: var(--for);
   }
   #love #hobbies {
     width: 100%;
@@ -1416,7 +1422,7 @@ button:hover {
     height: 30vh;
     width: 100%;
     text-align: center;
-    background-color: var(--for1);
+    background-color: var(--for);
     color: var(--background);
   }
   #touch .touchbg span {
@@ -1503,6 +1509,10 @@ button:hover {
     width: 20px;
     height: 20px;
     display: inline-block;
+  }
+  .interest {
+    margin: 10vh 0;
+    color: white;
   }
   footer {
     height: 14vh;
@@ -1978,7 +1988,6 @@ button:hover {
     display: inline-block;
     vertical-align: middle;
     font-size: 2vh;
-    margin: 30px 0 30px 0px;
   }
   .skill {
     position: relative;
@@ -1989,7 +1998,7 @@ button:hover {
   }
   .skill .skillhide {
     position: absolute;
-    height: 10px;
+    height: 4px;
     width: 100%;
     bottom: 0px;
     background-color: var(--bg1);
@@ -2067,8 +2076,11 @@ button:hover {
   }
   #love {
     position: relative;
-    background-color: var(--for1);
+    background-color: var(--for);
     text-align: center;
+  }
+  #love .glowcursor {
+    mix-blend-mode: multiply;
   }
   #love h2, #love span {
     color: white;
@@ -2083,7 +2095,7 @@ button:hover {
     width: 100%;
   }
   #love .ticker-love {
-    height: 50vw;
+    height: 620px;
   }
   #love .hobby:nth-child(odd) {
     margin: 100px 0 100px 0;
@@ -2143,7 +2155,7 @@ button:hover {
     height: 30vh;
     width: 100%;
     text-align: center;
-    background-color: var(--for1);
+    background-color: var(--for);
     color: var(--background);
   }
   #touch .touchbg span {
@@ -2333,7 +2345,7 @@ button:hover {
     grid-gap: 20px;
   }
   #skill .skill {
-    height: 12vh;
+    height: 10vh;
   }
   #footer {
     min-height: 26vh;

@@ -3,8 +3,13 @@ body {
 }
 
 .preload {
-  -webkit-animation: scrollhide 5s linear 1 forwards;
-          animation: scrollhide 5s linear 1 forwards;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+.scrollactive {
+  overflow: visible;
 }
 
 .preload-end {
@@ -36,6 +41,35 @@ body {
     overflow: visible;
   }
 }
+.loader {
+  height: 72px;
+  width: 72px;
+  position: fixed;
+  bottom: 24px;
+  opacity: 0;
+  -webkit-animation: loader 1s linear 5s 1 forwards;
+          animation: loader 1s linear 5s 1 forwards;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@-webkit-keyframes loader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 #preload-test {
   background-color: red;
   background-image: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F830587%2Fscreenshots%2F4381223%2Floader_gif.gif&imgrefurl=https%3A%2F%2Fdribbble.com%2Fshots%2F4381223-Loader-Gif&tbnid=T78z39aiDBOn0M&vet=12ahUKEwjF4IaK4fH5AhXhzqACHfPKCf4QMygIegUIARClAg..i&docid=Btbmn1fAx7hxMM&w=800&h=600&q=loader%20gif&ved=2ahUKEwjF4IaK4fH5AhXhzqACHfPKCf4QMygIegUIARClAg);
@@ -51,7 +85,7 @@ body {
   position: fixed;
   background-color: var(--for);
   color: white;
-  z-index: 100;
+  z-index: 150;
   overflow: hidden;
   text-align: center;
   opacity: 1;
@@ -76,7 +110,6 @@ body {
   -webkit-animation: introname 4s linear forwards;
           animation: introname 4s linear forwards;
   font-family: var(--cormo);
-  font-size: 8vw;
   font-style: italic;
   font-weight: 700;
   -webkit-animation-delay: 1.3s;
@@ -176,16 +209,16 @@ body {
 }
 @media only screen and (max-width: 1024px) {
   #introtext H1 {
-    font-size: 11vw;
+    font-size: 8vh;
     line-height: 100%;
     color: var(--primary);
     white-space: nowrap;
   }
   #introtext H3 {
-    font-size: 7vw;
+    font-size: 4vh;
   }
   #introtext p {
-    font-size: 6vw;
+    font-size: 4vh;
     font-weight: 700;
     white-space: nowrap;
   }
@@ -207,6 +240,7 @@ body {
 @media (min-width: 1367px) {
   #introtext H1 {
     margin: 0px;
+    font-size: 7vw;
   }
   #introtext H3 {
     margin: 0px;
