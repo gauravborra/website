@@ -49,6 +49,9 @@ body {
   width: 72px;
   position: fixed;
   bottom: 24px;
+  background-image: url(/Assets/loader.gif);
+  background-size: contain;
+  mix-blend-mode: screen;
   opacity: 0;
   animation: loader 1s linear 5s 1 forwards ;
   left:50%;

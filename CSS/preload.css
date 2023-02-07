@@ -18,18 +18,6 @@ body {
   pointer-events: none;
 }
 
-@-webkit-keyframes scrollhide {
-  0% {
-    overflow: hidden;
-  }
-  99.9% {
-    overflow: hidden;
-  }
-  100% {
-    overflow: visible;
-  }
-}
-
 @keyframes scrollhide {
   0% {
     overflow: hidden;
@@ -46,20 +34,13 @@ body {
   width: 72px;
   position: fixed;
   bottom: 24px;
+  background-image: url(/Assets/loader.gif);
+  background-size: contain;
+  mix-blend-mode: screen;
   opacity: 0;
-  -webkit-animation: loader 1s linear 5s 1 forwards;
-          animation: loader 1s linear 5s 1 forwards;
+  animation: loader 1s linear 5s 1 forwards;
   left: 50%;
   transform: translateX(-50%);
-}
-
-@-webkit-keyframes loader {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes loader {
@@ -98,50 +79,28 @@ body {
   transform: translate(-50%, -50%);
 }
 #preload #introtext H3 {
-  -webkit-animation: introhi 4s linear forwards;
-          animation: introhi 4s linear forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: introhi 4s linear forwards;
+  animation-delay: 1s;
   opacity: 0;
   font-family: var(--cormo);
   font-style: italic;
 }
 #preload #introtext H1 {
-  -webkit-animation: introname 4s linear forwards;
-          animation: introname 4s linear forwards;
+  animation: introname 4s linear forwards;
   font-family: var(--cormo);
   font-style: italic;
   font-weight: 700;
-  -webkit-animation-delay: 1.3s;
-          animation-delay: 1.3s;
+  animation-delay: 1.3s;
   opacity: 0;
 }
 #preload #introtext P {
-  -webkit-animation: introsub 5s linear forwards;
-          animation: introsub 5s linear forwards;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation: introsub 5s linear forwards;
+  animation-delay: 1.5s;
   font-family: var(--poppins);
   color: var(--mid);
   opacity: 0;
 }
-@-webkit-keyframes introhi {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes introhi {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes introname {
   0% {
     opacity: 0;
   }
@@ -154,16 +113,6 @@ body {
     opacity: 0;
   }
   100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes introsub {
-  0% {
-    opacity: 0;
-    transform: translateX(10%);
-  }
-  100% {
-    transform: translateX(0%);
     opacity: 1;
   }
 }
@@ -180,19 +129,6 @@ body {
 
 .preload-end {
   opacity: 0 !important;
-}
-
-@-webkit-keyframes preloader {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    pointer-events: none;
-  }
 }
 
 @keyframes preloader {
