@@ -600,7 +600,7 @@
   </div>
 
   </section>
-  <iframe class="hidden-m" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhoEySTy2Qb0iYILeJQVBu1%2FSevac%3Fnode-id%3D7%253A14%26scaling%3Dscale-down-width%26hotspot-hints%3D0" allowfullscreen onload="preload()" frameborder="0" 
+  <iframe class="hidden-m" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhoEySTy2Qb0iYILeJQVBu1%2FSevac%3Fnode-id%3D7%253A14%26scaling%3Dscale-down-width%26hotspot-hints%3D0" allowfullscreen onload="prel()" frameborder="0" 
   marginheight="0" 
   marginwidth="0" 
   width="100%" 
@@ -1103,15 +1103,18 @@ $(window).scroll(function (event) {
 
 <!-- Preload -->
   <script>
+    
     var body=document.body;
-    window.addEventListener('load',function preload(){
+    window.addEventListener('load',function (){
     const preload = document.getElementById('preload');
     preload.classList.add('preload-end'); 
     body.classList.remove('preload');
     body.classList.remove('no-scroll');
-   
-    
+    const myTimeout = setTimeout('load', 5000);
+    // timeout = setTimeout(5000);
   });
+  // const myTimeout = setTimeout('load', 10000);
+  // const myTimeout = setTimeout (function() { preload(); }, 5000);
   </script> 
  
 
