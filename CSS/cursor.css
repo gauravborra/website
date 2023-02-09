@@ -43,16 +43,7 @@
   transform-origin: 70% 70%;
   transform-origin: center;
   mix-blend-mode: normal;
-  -webkit-animation: pulse2 0.5s infinite alternate;
-          animation: pulse2 0.5s infinite alternate;
-}
-@-webkit-keyframes pulse2 {
-  from {
-    box-shadow: 0px 0px 0px 0px rgb(127, 218, 9);
-  }
-  to {
-    box-shadow: 0px 0px 0px 20px rgba(127, 218, 9, 0.5);
-  }
+  animation: pulse2 0.5s infinite alternate;
 }
 @keyframes pulse2 {
   from {
@@ -67,16 +58,7 @@
   transform: scale(1.2);
   color: white;
   z-index: 100;
-  -webkit-animation: rotatelink 5s linear infinite;
-          animation: rotatelink 5s linear infinite;
-}
-@-webkit-keyframes rotatelink {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  animation: rotatelink 5s linear infinite;
 }
 @keyframes rotatelink {
   from {
@@ -93,18 +75,8 @@
   background-color: var(--primary);
   mix-blend-mode: normal;
   border: none;
-  -webkit-animation: pulse infinite 1s;
-          animation: pulse infinite 1s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-}
-@-webkit-keyframes pulse {
-  from {
-    box-shadow: 0px 0px 0px 0px rgb(127, 218, 9);
-  }
-  to {
-    box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
-  }
+  animation: pulse infinite 1s;
+  animation-direction: alternate;
 }
 @keyframes pulse {
   from {
@@ -122,8 +94,7 @@
 }
 
 .ripple {
-  -webkit-animation: pulse 0.5s 2 alternate;
-          animation: pulse 0.5s 2 alternate;
+  animation: pulse 0.5s 2 alternate;
 }
 @keyframes pulse {
   from {

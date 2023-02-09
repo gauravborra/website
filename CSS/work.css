@@ -304,13 +304,11 @@
     letter-spacing: 3px;
   }
   #collection {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   #collection #collectiongrid {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     display: grid;

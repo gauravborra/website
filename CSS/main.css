@@ -99,16 +99,7 @@ html, body {
   transform-origin: center;
   overflow: hidden;
   mix-blend-mode: normal;
-  -webkit-animation: pulse2 0.5s infinite alternate;
-          animation: pulse2 0.5s infinite alternate;
-}
-@-webkit-keyframes pulse2 {
-  from {
-    box-shadow: 0px 0px 0px 0px rgb(127, 218, 9);
-  }
-  to {
-    box-shadow: 0px 0px 0px 20px rgba(127, 218, 9, 0.5);
-  }
+  animation: pulse2 0.5s infinite alternate;
 }
 @keyframes pulse2 {
   from {
@@ -134,18 +125,8 @@ html, body {
   mix-blend-mode: normal;
   border: none;
   z-index: 100;
-  -webkit-animation: pulse infinite 1s;
-          animation: pulse infinite 1s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-}
-@-webkit-keyframes pulse {
-  from {
-    box-shadow: 0px 0px 0px 0px rgb(127, 218, 9);
-  }
-  to {
-    box-shadow: 0px 0px 0px 10px rgba(127, 218, 9, 0.5);
-  }
+  animation: pulse infinite 1s;
+  animation-direction: alternate;
 }
 @keyframes pulse {
   from {
@@ -163,8 +144,7 @@ html, body {
 }
 
 .ripple {
-  -webkit-animation: pulse 0.5s 2 alternate;
-          animation: pulse 0.5s 2 alternate;
+  animation: pulse 0.5s 2 alternate;
 }
 @keyframes pulse {
   from {
@@ -360,6 +340,8 @@ button:hover {
   display: inline-block;
   opacity: 0;
   transition: opacity 1s;
+  font-size: 1.6vw;
+  font-weight: 300;
 }
 #hero #scorpio:hover ~ .herotext1 {
   opacity: 1;
@@ -415,17 +397,8 @@ button:hover {
   height: 96px;
   top: 40vh;
   left: 40vw;
-  -webkit-animation: moonmove 30s infinite linear forwards;
-          animation: moonmove 30s infinite linear forwards;
+  animation: moonmove 30s infinite linear forwards;
   transform: translate(0px, 0px), scale(0.5);
-}
-@-webkit-keyframes moonmove {
-  from {
-    transform: translate(0px, 0px);
-  }
-  to {
-    transform: translate(100px, -700px);
-  }
 }
 @keyframes moonmove {
   from {
@@ -438,22 +411,7 @@ button:hover {
 #hero .strokepath {
   stroke-dasharray: 1000;
   stroke-dashoffset: 0;
-  -webkit-animation: dash 10s linear infinite;
-          animation: dash 10s linear infinite;
-}
-@-webkit-keyframes dash {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  20% {
-    stroke-dashoffset: 1000;
-  }
-  80% {
-    stroke-dashoffset: 1000;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+  animation: dash 10s linear infinite;
 }
 @keyframes dash {
   0% {
@@ -467,14 +425,6 @@ button:hover {
   }
   100% {
     stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes scaleup {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
   }
 }
 @keyframes scaleup {
@@ -497,16 +447,7 @@ button:hover {
   position: relative;
 }
 #hero #herocentermain #cloud_left {
-  -webkit-animation: cloudl 10s ease-in-out infinite alternate;
-          animation: cloudl 10s ease-in-out infinite alternate;
-}
-@-webkit-keyframes cloudl {
-  from {
-    transform: translateX(0px);
-  }
-  from {
-    transform: translateX(-100px);
-  }
+  animation: cloudl 10s ease-in-out infinite alternate;
 }
 @keyframes cloudl {
   from {
@@ -517,16 +458,7 @@ button:hover {
   }
 }
 #hero #herocentermain #cloud_right {
-  -webkit-animation: cloudr 10s ease-in-out infinite alternate;
-          animation: cloudr 10s ease-in-out infinite alternate;
-}
-@-webkit-keyframes cloudr {
-  from {
-    transform: translateX(0px);
-  }
-  from {
-    transform: translateX(50px);
-  }
+  animation: cloudr 10s ease-in-out infinite alternate;
 }
 @keyframes cloudr {
   from {
@@ -538,16 +470,7 @@ button:hover {
 }
 #hero #herocentermain #levi {
   position: absolute;
-  -webkit-animation: levitate 2s ease-in-out infinite alternate;
-          animation: levitate 2s ease-in-out infinite alternate;
-}
-@-webkit-keyframes levitate {
-  from {
-    transform: translatey(0px);
-  }
-  to {
-    transform: translatey(-25px);
-  }
+  animation: levitate 2s ease-in-out infinite alternate;
 }
 @keyframes levitate {
   from {
@@ -558,16 +481,7 @@ button:hover {
   }
 }
 #hero #herocentermain #shadow {
-  -webkit-animation: shadow 2s infinite alternate;
-          animation: shadow 2s infinite alternate;
-}
-@-webkit-keyframes shadow {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.2;
-  }
+  animation: shadow 2s infinite alternate;
 }
 @keyframes shadow {
   from {
@@ -578,22 +492,12 @@ button:hover {
   }
 }
 #hero #herocentermain #plant {
-  -webkit-animation: levitate 2s ease-in infinite 1s alternate;
-          animation: levitate 2s ease-in infinite 1s alternate;
+  animation: levitate 2s ease-in infinite 1s alternate;
 }
 #hero #herocentermain #orbs {
   position: absolute;
   transform-origin: 50% 50%;
-  -webkit-animation: orbs 30s linear infinite normal;
-          animation: orbs 30s linear infinite normal;
-}
-@-webkit-keyframes orbs {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  animation: orbs 30s linear infinite normal;
 }
 @keyframes orbs {
   from {
@@ -606,46 +510,32 @@ button:hover {
 #hero #herocentermain #orbs #DSLR {
   position: absolute;
   transform-origin: 68% 61%;
-  -webkit-animation: orb 30s linear infinite;
-          animation: orb 30s linear infinite;
+  animation: orb 30s linear infinite;
 }
 #hero #herocentermain #orbs #gamepad {
   position: absolute;
   transform-origin: 50.5% 29%;
-  -webkit-animation: orb 30s linear infinite;
-          animation: orb 30s linear infinite;
+  animation: orb 30s linear infinite;
 }
 #hero #herocentermain #orbs #Telescope {
   position: absolute;
   transform-origin: 33.5% 41%;
-  -webkit-animation: orb 30s linear infinite;
-          animation: orb 30s linear infinite;
+  animation: orb 30s linear infinite;
 }
 #hero #herocentermain #orbs #Repair {
   position: absolute;
   transform-origin: 66.5% 41%;
-  -webkit-animation: orb 30s linear infinite;
-          animation: orb 30s linear infinite;
+  animation: orb 30s linear infinite;
 }
 #hero #herocentermain #orbs #paint {
   position: absolute;
   transform-origin: 34.5% 60%;
-  -webkit-animation: orb 30s linear infinite;
-          animation: orb 30s linear infinite;
+  animation: orb 30s linear infinite;
 }
 #hero #herocentermain #orbs #compass {
   position: absolute;
   transform-origin: 51% 72%;
-  -webkit-animation: orb 30s linear infinite;
-          animation: orb 30s linear infinite;
-}
-@-webkit-keyframes orb {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
+  animation: orb 30s linear infinite;
 }
 @keyframes orb {
   from {
@@ -715,26 +605,7 @@ button:hover {
   height: 200px;
   width: 2px;
   background-color: var(--primary);
-  -webkit-animation: scroller 2s infinite ease-in-out;
-          animation: scroller 2s infinite ease-in-out;
-}
-@-webkit-keyframes scroller {
-  0% {
-    height: 0px;
-    transform: translateY();
-  }
-  40% {
-    height: 200px;
-    transform: translateY(0px);
-  }
-  60% {
-    height: 200px;
-    transform: translateY(0px);
-  }
-  100% {
-    height: 0px;
-    transform: translateY(200px);
-  }
+  animation: scroller 2s infinite ease-in-out;
 }
 @keyframes scroller {
   0% {
@@ -806,7 +677,8 @@ button:hover {
 }
 
 #skills {
-  min-height: 800px;
+  height: -moz-fit-content;
+  height: fit-content;
   position: relative;
 }
 #skills H2 {
@@ -969,67 +841,6 @@ button:hover {
   #menulist .menu-items:hover {
     color: var(--primary);
   }
-  @-webkit-keyframes menu-items {
-    0% {
-      opacity: 1;
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 300, 0, 1);
-    }
-    1.3% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 237.02, 0, 1);
-    }
-    2.55% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 182.798, 0, 1);
-    }
-    4.1% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 125.912, 0, 1);
-    }
-    5.71% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 79.596, 0, 1);
-    }
-    8.11% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 31.647, 0, 1);
-    }
-    8.81% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 21.84, 0, 1);
-    }
-    11.96% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -4.825, 0, 1);
-    }
-    12.11% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -5.53, 0, 1);
-    }
-    15.07% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -12.662, 0, 1);
-    }
-    16.12% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -13.007, 0, 1);
-    }
-    27.23% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.352, 0, 1);
-    }
-    27.58% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.121, 0, 1);
-    }
-    38.34% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.311, 0, 1);
-    }
-    40.09% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.291, 0, 1);
-    }
-    50% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.048, 0, 1);
-    }
-    60.56% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.007, 0, 1);
-    }
-    82.78% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    }
-    100% {
-      opacity: 1;
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    }
-  }
   @keyframes menu-items {
     0% {
       opacity: 1;
@@ -1092,28 +903,22 @@ button:hover {
     }
   }
   .menu-items:nth-of-type(1) {
-    -webkit-animation: menu-items 0.3s 0.2s ease-in-out forwards;
-            animation: menu-items 0.3s 0.2s ease-in-out forwards;
+    animation: menu-items 0.3s 0.2s ease-in-out forwards;
   }
   .menu-items:nth-of-type(2) {
-    -webkit-animation: menu-items 0.3s 0.4s ease-in-out forwards;
-            animation: menu-items 0.3s 0.4s ease-in-out forwards;
+    animation: menu-items 0.3s 0.4s ease-in-out forwards;
   }
   .menu-items:nth-of-type(3) {
-    -webkit-animation: menu-items 0.3s 0.6s ease-in-out forwards;
-            animation: menu-items 0.3s 0.6s ease-in-out forwards;
+    animation: menu-items 0.3s 0.6s ease-in-out forwards;
   }
   .menu-items:nth-of-type(4) {
-    -webkit-animation: menu-items 0.3s 0.8s ease-in-out forwards;
-            animation: menu-items 0.3s 0.8s ease-in-out forwards;
+    animation: menu-items 0.3s 0.8s ease-in-out forwards;
   }
   .menu-items:nth-of-type(5) {
-    -webkit-animation: menu-items 0.3s 1s ease-in-out forwards;
-            animation: menu-items 0.3s 1s ease-in-out forwards;
+    animation: menu-items 0.3s 1s ease-in-out forwards;
   }
   .menu-icons {
-    -webkit-animation: menu-items 0.3s 1s ease-in-out forwards;
-            animation: menu-items 0.3s 1s ease-in-out forwards;
+    animation: menu-items 0.3s 1s ease-in-out forwards;
   }
   .menu-icons {
     position: absolute;
@@ -1349,7 +1154,8 @@ button:hover {
     transition: 0.5 ease-in;
   }
   #softwares {
-    height: 800px;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   #software {
     width: 100%;
@@ -1632,67 +1438,6 @@ button:hover {
   #menulist .menu-items:hover {
     color: var(--primary);
   }
-  @-webkit-keyframes menu-items {
-    0% {
-      opacity: 1;
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 300, 0, 1);
-    }
-    1.3% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 237.02, 0, 1);
-    }
-    2.55% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 182.798, 0, 1);
-    }
-    4.1% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 125.912, 0, 1);
-    }
-    5.71% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 79.596, 0, 1);
-    }
-    8.11% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 31.647, 0, 1);
-    }
-    8.81% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 21.84, 0, 1);
-    }
-    11.96% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -4.825, 0, 1);
-    }
-    12.11% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -5.53, 0, 1);
-    }
-    15.07% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -12.662, 0, 1);
-    }
-    16.12% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -13.007, 0, 1);
-    }
-    27.23% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.352, 0, 1);
-    }
-    27.58% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.121, 0, 1);
-    }
-    38.34% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.311, 0, 1);
-    }
-    40.09% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.291, 0, 1);
-    }
-    50% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.048, 0, 1);
-    }
-    60.56% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.007, 0, 1);
-    }
-    82.78% {
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    }
-    100% {
-      opacity: 1;
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    }
-  }
   @keyframes menu-items {
     0% {
       opacity: 1;
@@ -1755,24 +1500,19 @@ button:hover {
     }
   }
   .menu-items:nth-of-type(1) {
-    -webkit-animation: menu-items 0.3s 0.4s ease-in-out forwards;
-            animation: menu-items 0.3s 0.4s ease-in-out forwards;
+    animation: menu-items 0.3s 0.4s ease-in-out forwards;
   }
   .menu-items:nth-of-type(2) {
-    -webkit-animation: menu-items 0.3s 0.6s ease-in-out forwards;
-            animation: menu-items 0.3s 0.6s ease-in-out forwards;
+    animation: menu-items 0.3s 0.6s ease-in-out forwards;
   }
   .menu-items:nth-of-type(3) {
-    -webkit-animation: menu-items 0.3s 0.8s ease-in-out forwards;
-            animation: menu-items 0.3s 0.8s ease-in-out forwards;
+    animation: menu-items 0.3s 0.8s ease-in-out forwards;
   }
   .menu-items:nth-of-type(4) {
-    -webkit-animation: menu-items 0.3s 1s ease-in-out forwards;
-            animation: menu-items 0.3s 1s ease-in-out forwards;
+    animation: menu-items 0.3s 1s ease-in-out forwards;
   }
   .menu-items:nth-of-type(5) {
-    -webkit-animation: menu-items 0.3s 1.2s ease-in-out forwards;
-            animation: menu-items 0.3s 1.2s ease-in-out forwards;
+    animation: menu-items 0.3s 1.2s ease-in-out forwards;
   }
   .menu-icons {
     position: absolute;
@@ -1788,8 +1528,7 @@ button:hover {
     margin-right: 50px;
   }
   .menu-icons {
-    -webkit-animation: menu-items 0.3s 1.2s ease-in-out forwards;
-            animation: menu-items 0.3s 1.2s ease-in-out forwards;
+    animation: menu-items 0.3s 1.2s ease-in-out forwards;
   }
   #hammenu {
     height: 48px;
@@ -1970,7 +1709,8 @@ button:hover {
     opacity: 1;
   }
   #skills {
-    min-height: 720px;
+    height: -moz-fit-content;
+    height: fit-content;
     position: relative;
   }
   #skills H2 {
@@ -2059,11 +1799,13 @@ button:hover {
     transition: 0.3s ease-in;
   }
   #softwares {
-    height: 680px;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   #software {
     width: 100%;
-    height: 250px;
+    height: -moz-fit-content;
+    height: fit-content;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
@@ -2095,7 +1837,7 @@ button:hover {
     width: 100%;
   }
   #love .ticker-love {
-    height: 620px;
+    height: 720px;
   }
   #love .hobby:nth-child(odd) {
     margin: 100px 0 100px 0;
@@ -2263,7 +2005,6 @@ button:hover {
     display: inline-block;
   }
   footer {
-    height: 8vh;
     color: white;
     text-align: center;
     width: 100%;
