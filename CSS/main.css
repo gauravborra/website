@@ -636,12 +636,14 @@ button:hover {
   width: auto;
   position: relative;
   background-color: var(--for);
+  color: var(--background);
+  padding: 32vh 6vw 0vh 6vw;
   text-align: center;
 }
 #what h2 {
   text-align: center;
   color: var(--background);
-  margin: 7vw 0 6vw 0;
+  margin: 7vw 0 3vw 0;
   font-family: var(--poppins);
   font-weight: 300;
 }
@@ -659,7 +661,7 @@ button:hover {
   display: none !important;
 }
 .recent-work .ticker {
-  margin: -8vh 0 8vh 0;
+  margin: 0 0 8vh 0;
   height: 625px;
 }
 
@@ -703,10 +705,8 @@ button:hover {
   background-color: var(--bg1);
 }
 .skill .skillhover {
-  height: 10px;
-  width: 70%;
+  height: 4px;
   bottom: 0px;
-  background-color: var(--primary);
 }
 
 #softwares {
@@ -1030,6 +1030,10 @@ button:hover {
   }
   #what {
     text-align: center;
+    padding: 16vh 6vw 0vh 6vw;
+  }
+  #what H2 {
+    margin: 16vw 0 10vw 0;
   }
   #what .workgrid div {
     background-color: var(--mid);
@@ -1098,53 +1102,8 @@ button:hover {
     margin: 20px 0 20px 0;
     display: block;
   }
-  #s1 {
-    width: 90%;
-    transition: 0.5 ease-in;
-  }
-  #s2 {
-    width: 90%;
-    transition: 0.5 ease-in;
-  }
-  #s3 {
-    width: 90%;
-    transition: 0.5 ease-in;
-  }
-  #s4 {
-    width: 90%;
-    transition: 0.5 ease-in;
-  }
-  #s5 {
-    width: 90%;
-    transition: 0.5 ease-in;
-  }
-  #s6 {
-    width: 90%;
-    transition: 0.5 ease-in;
-  }
-  #s7 {
-    width: 90%;
-    transition: 0.5 ease-in;
-  }
-  #s8 {
-    width: 90%;
-    transition: 0.5 ease-in;
-  }
-  #s9 {
-    width: 90%;
-    transition: 0.5 ease-in;
-  }
-  #s10 {
-    width: 90%;
-    transition: 0.5 ease-in;
-  }
-  #s11 {
-    width: 90%;
-    transition: 0.5 ease-in;
-  }
-  #s12 {
-    width: 90%;
-    transition: 0.5 ease-in;
+  .skillhover {
+    width: 100%;
   }
   #softwares {
     height: -moz-fit-content;
@@ -1742,59 +1701,15 @@ button:hover {
     background-color: var(--bg1);
   }
   .skill .skillhover {
-    height: 10px;
+    height: 4px;
     width: 0%;
     bottom: 0px;
     background-color: var(--primary);
-    transition: 0.2s ease-in;
+    transition: 0.1s ease-in;
   }
-  #skill :hover #s1 {
-    width: 90%;
-    transition: 0.3s ease-in;
-  }
-  #skill :hover #s2 {
-    width: 90%;
-    transition: 0.3s ease-in;
-  }
-  #skill :hover #s3 {
-    width: 80%;
-    transition: 0.3s ease-in;
-  }
-  #skill :hover #s4 {
-    width: 95%;
-    transition: 0.3s ease-in;
-  }
-  #skill :hover #s5 {
-    width: 95%;
-    transition: 0.3s ease-in;
-  }
-  #skill :hover #s6 {
-    width: 75%;
-    transition: 0.3s ease-in;
-  }
-  #skill :hover #s7 {
-    width: 80%;
-    transition: 0.3s ease-in;
-  }
-  #skill :hover #s8 {
-    width: 70%;
-    transition: 0.3s ease-in;
-  }
-  #skill :hover #s9 {
-    width: 70%;
-    transition: 0.3s ease-in;
-  }
-  #skill :hover #s10 {
-    width: 80%;
-    transition: 0.3s ease-in;
-  }
-  #skill :hover #s11 {
-    width: 90%;
-    transition: 0.3s ease-in;
-  }
-  #skill :hover #s12 {
-    width: 30%;
-    transition: 0.3s ease-in;
+  #skill :hover .skillhover {
+    width: 100%;
+    transition: 0.1s ease-in;
   }
   #softwares {
     height: -moz-fit-content;

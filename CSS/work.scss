@@ -167,9 +167,8 @@ font-family: var(--poppins);
 display: inline-block;
 padding: 10px;
 font-size:4vw;
-font-family: Roboto;
 font-style: normal;
-font-weight: bold;
+font-weight: 700;
 line-height: 110%;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
@@ -572,6 +571,8 @@ button{
     grid-template-columns: 1fr;
     grid-gap: 5vh;
     width: 100%;
+    margin-top: -10vw;
+    
     
   .work{
       min-height: 35vw;

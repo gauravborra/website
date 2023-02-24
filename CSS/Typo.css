@@ -7,7 +7,7 @@
   color: var(--mid);
   position: absolute;
   white-space: nowrap;
-  top: 1vh;
+  top: 3vh;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -15,6 +15,22 @@
 .headingb {
   color: var(--for2);
   font-weight: 300;
+}
+
+.black {
+  color: black;
+}
+
+.blackbg {
+  background-color: black;
+}
+
+.white {
+  color: white;
+}
+
+.whitebg {
+  background-color: white;
 }
 
 .displaytext1 {
@@ -67,6 +83,10 @@
   font-weight: 400;
   text-align: center;
   margin: 0;
+}
+
+.subheadw {
+  margin: 5vw 0 6vw 0;
 }
 
 .title {
@@ -185,7 +205,6 @@
     position: absolute;
     white-space: nowrap;
     top: 5vw;
-    right: 10vw;
   }
   .title {
     font-family: var(--poppins);

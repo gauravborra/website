@@ -133,6 +133,7 @@ a:hover svg {
   }
   .figmafoot {
     height: 7vh;
+    display: none;
   }
   .figmafoot svg {
     fill: var(--mid);
