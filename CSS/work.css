@@ -134,7 +134,6 @@
     background-repeat: no-repeat;
   }
   #projects {
-    min-height: 2000px;
     display: block;
   }
   #projects button {
@@ -311,7 +310,8 @@
     height: -moz-fit-content;
     height: fit-content;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 5vw;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 100px;
   }
   #collection .collection {
@@ -356,7 +356,6 @@
 }
 @media only screen and (max-width: 1024px) {
   #projects {
-    min-height: 1000px;
     display: block;
   }
   #projects button {

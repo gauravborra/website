@@ -185,7 +185,7 @@ text-overflow: wrap;
 } 
 
 #projects{
-    min-height: 2000px;
+    // min-height: 2000px;
     //  width: 100%;
     display: block;
   button{
@@ -400,7 +400,8 @@ box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
   height: fit-content;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 5vw;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 100px;
   
   }
@@ -456,7 +457,7 @@ opacity: 1;
 // Mobile Screens
 @media only screen and (max-width: 1024px){
 #projects{
-  min-height: 1000px;
+  // min-height: 1000px;
   // width: 100%;
   display: block;
 
