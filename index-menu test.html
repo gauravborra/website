@@ -36,7 +36,7 @@
    <div class="cursorsmall hidden-m"></div>
    <div class="glowcursor hidden-m"></div>
 
-   <svg id="hammenu" class="navlinks hidden-m " viewBox="0 0 48 48">
+   <svg id="hammenu" class="navlinks" viewBox="0 0 48 48">
     <g transform="translate(-287 -644)">
       <circle data-name="Ellipse 262" cx="24" cy="24" r="24" transform="translate(287 644)" fill="#fff"/>
       <rect class="ham" id="Rectangle_90" data-name="Rectangle 90" width="20" height="2" transform="translate(301 662)" fill="gray"/>
@@ -69,14 +69,14 @@
   </div>
 </div> 
 
-<iframe class="hidden-m buttonlink" src="https://gauravborra.framer.website/work" allowfullscreen frameborder="0" 
+<iframe class="hidden-m buttonlink" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhoEySTy2Qb0iYILeJQVBu1%2FSevac%3Fnode-id%3D7%253A14%26scaling%3Dscale-down-width%26hotspot-hints%3D0&hide-ui=1" allowfullscreen frameborder="0" 
 marginheight="0" 
 marginwidth="0" 
 width="100%" 
 height="100%" 
 scrolling="auto"></iframe>
 
-<iframe  class="hidden-l" src="https://gauravborra.framer.website/work" allowfullscreen frameborder="0" 
+<iframe  class="hidden-l" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhoEySTy2Qb0iYILeJQVBu1%2FSevac%3Fnode-id%3D25%253A2%26scaling%3Dscale-down-width%26hotspot-hints%3D0" allowfullscreen frameborder="0" 
 marginheight="0" 
 marginwidth="0" 
 width="100%" 
@@ -87,7 +87,109 @@ scrolling="auto"></iframe>
 
   
    
+<!--  
+<script> 
+    var body = document.body,
+        overlay = document.querySelector('.overlay'),
+        overlayBtts = document.querySelectorAll('button[class$="overlay"]');
+        
+    [].forEach.call(overlayBtts, function(btt) {
 
+      btt.addEventListener('click', function() { 
+         
+         /* Detect the button class name */
+         var overlayOpen = this.className === 'open-overlay';
+         
+         /* Toggle the aria-hidden state on the overlay and the 
+            no-scroll class on the body */
+         overlay.setAttribute('aria-hidden', !overlayOpen);
+         body.classList.toggle('noscroll', overlayOpen);
+         
+         /* On some mobile browser when the overlay was previously
+            opened and scrolled, if you open it again it doesn't 
+            reset its scrollTop property */
+         overlay.scrollTop = 0;
+
+      }, false);
+
+    });
+
+
+</script>
+-->
+<!-- <script> 
+window.addEventListener('load',()=>{
+const preload=document.querySelector('.preload');
+preload.classList.add('prelaod-end');  
+
+});
+    <script>
+		var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+    </script>
+  
+  <script>
+    var current = $(window).scrollTop();
+    var total = $(window).height() - current;
+    var ele = $(".headingb");
+    var currPosition = ele.position().left + 360;
+    var trackLength = 300;
+$(window).scroll(function (event) {
+    current = $(window).scrollTop();
+    console.log({total:total,current:current});
+    console.log(current/total * 100);
+    var newPosition = trackLength * (current/total)
+    ele.css({left:currPosition+newPosition+'px'});
+});
+
+  </script>
+
+</script>
+
+ 
+    <script>
+		var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+    </script>
+
+  <script>
+
+$(function() {      
+    let isMobile = window.matchMedia("only screen and (max-width: 1024px)").matches;
+
+    if (isMobile) {
+        //Conditional script here
+        var current = $(window).scrollTop();
+    var total = $(window).height() - current;
+    var ele = $(".heading");
+    var currPosition = ele.position().left + 1;
+    var trackLength = 1;
+$(window).scroll(function (event) {
+    current = $(window).scrollTop();
+    console.log({total:total,current:current});
+    console.log(current/total * 100);
+    var newPosition = trackLength * (current/total)
+    ele.css({left:currPosition+newPosition+'px'});
+});
+    }
+  else(){
+    var current = $(window).scrollTop();
+    var total = $(window).height() - current;
+    var ele = $(".heading");
+    var currPosition = ele.position().left + 10;
+    var trackLength = 100;
+$(window).scroll(function (event) {
+    current = $(window).scrollTop();
+    console.log({total:total,current:current});
+    console.log(current/total * 100);
+    var newPosition = trackLength * (current/total)
+    ele.css({left:currPosition+newPosition+'px'});
+});
+
+  }
+ });
+  </script>
+  -->
 <script>
     // Center all the things!
     var rellax = new Rellax('.rellax', {
