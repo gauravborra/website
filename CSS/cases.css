@@ -82,6 +82,7 @@ html, body, iframe {
   }
   100% {
     opacity: 0;
+    pointer-events: none;
   }
 }
 .figmafoot {
