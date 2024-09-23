@@ -70,7 +70,6 @@ body {
   overflow: hidden;
   text-align: center;
   opacity: 1;
-  animation: preloader 5s linear 1 forwards;
 }
 #preload #introtext {
   position: absolute;
