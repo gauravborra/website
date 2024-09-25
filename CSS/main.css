@@ -27,6 +27,14 @@ html, body {
   min-height: 100%;
 }
 
+.framer-mask {
+  height: 35px;
+  width: 142px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 #__framer-badge-container {
   display: none !important;
 }

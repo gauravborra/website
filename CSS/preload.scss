@@ -21,6 +21,17 @@ body {
   overflow: hidden;
   }
 
+  .framer-mask{
+    height: 44px;
+    width: 148px;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    background-image: url(/Assets/resume.svg);
+    z-index: 10;
+    cursor: pointer !important;
+
+  }
   .scrollactive{
    overflow: visible;
   }
