@@ -28,11 +28,14 @@ html, body {
 }
 
 .framer-mask {
-  height: 35px;
-  width: 142px;
+  height: 44px;
+  width: 148px;
   position: fixed;
-  bottom: 20px;
+  bottom: 15px;
   right: 20px;
+  background-image: url(/Assets/resume.svg);
+  z-index: 10;
+  cursor: pointer !important;
 }
 
 #__framer-badge-container {
@@ -430,116 +433,6 @@ button:hover {
     transform: scale(1);
   }
 }
-#hero #herocentermain {
-  width: 90%;
-  height: 75%;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-}
-#hero #herocentermain #herocenter {
-  position: relative;
-}
-#hero #herocentermain #cloud_left {
-  animation: cloudl 10s ease-in-out infinite alternate;
-}
-@keyframes cloudl {
-  from {
-    transform: translateX(0px);
-  }
-  from {
-    transform: translateX(-100px);
-  }
-}
-#hero #herocentermain #cloud_right {
-  animation: cloudr 10s ease-in-out infinite alternate;
-}
-@keyframes cloudr {
-  from {
-    transform: translateX(0px);
-  }
-  from {
-    transform: translateX(50px);
-  }
-}
-#hero #herocentermain #levi {
-  position: absolute;
-  animation: levitate 2s ease-in-out infinite alternate;
-}
-@keyframes levitate {
-  from {
-    transform: translatey(0px);
-  }
-  to {
-    transform: translatey(-25px);
-  }
-}
-#hero #herocentermain #shadow {
-  animation: shadow 2s infinite alternate;
-}
-@keyframes shadow {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.2;
-  }
-}
-#hero #herocentermain #plant {
-  animation: levitate 2s ease-in infinite 1s alternate;
-}
-#hero #herocentermain #orbs {
-  position: absolute;
-  transform-origin: 50% 50%;
-  animation: orbs 30s linear infinite normal;
-}
-@keyframes orbs {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-#hero #herocentermain #orbs #DSLR {
-  position: absolute;
-  transform-origin: 68% 61%;
-  animation: orb 30s linear infinite;
-}
-#hero #herocentermain #orbs #gamepad {
-  position: absolute;
-  transform-origin: 50.5% 29%;
-  animation: orb 30s linear infinite;
-}
-#hero #herocentermain #orbs #Telescope {
-  position: absolute;
-  transform-origin: 33.5% 41%;
-  animation: orb 30s linear infinite;
-}
-#hero #herocentermain #orbs #Repair {
-  position: absolute;
-  transform-origin: 66.5% 41%;
-  animation: orb 30s linear infinite;
-}
-#hero #herocentermain #orbs #paint {
-  position: absolute;
-  transform-origin: 34.5% 60%;
-  animation: orb 30s linear infinite;
-}
-#hero #herocentermain #orbs #compass {
-  position: absolute;
-  transform-origin: 51% 72%;
-  animation: orb 30s linear infinite;
-}
-@keyframes orb {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
 #hero .logo {
   position: absolute;
   background-image: url(/Assets/png/GB-logo.png);
@@ -625,6 +518,117 @@ button:hover {
   top: 49vh;
   right: -30px;
   transform: rotate(-90deg);
+}
+
+#herocentermain {
+  width: 90%;
+  height: 75%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+#herocentermain #herocenter {
+  position: relative;
+}
+#herocentermain #cloud_left {
+  animation: cloudl 10s ease-in-out infinite alternate;
+}
+@keyframes cloudl {
+  from {
+    transform: translateX(0px);
+  }
+  from {
+    transform: translateX(-100px);
+  }
+}
+#herocentermain #cloud_right {
+  animation: cloudr 10s ease-in-out infinite alternate;
+}
+@keyframes cloudr {
+  from {
+    transform: translateX(0px);
+  }
+  from {
+    transform: translateX(50px);
+  }
+}
+#herocentermain #levi {
+  position: absolute;
+  animation: levitate 2s ease-in-out infinite alternate;
+}
+@keyframes levitate {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(-25px);
+  }
+}
+#herocentermain #shadow {
+  animation: shadow 2s infinite alternate;
+}
+@keyframes shadow {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+#herocentermain #plant {
+  animation: levitate 2s ease-in infinite 1s alternate;
+}
+#herocentermain #orbs {
+  position: absolute;
+  transform-origin: 51% 50%;
+  animation: orbs 30s linear infinite normal;
+}
+@keyframes orbs {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#herocentermain #orbs #DSLR {
+  position: absolute;
+  transform-origin: 68% 61%;
+  animation: orb 30s linear infinite;
+}
+#herocentermain #orbs #gamepad {
+  position: absolute;
+  transform-origin: 50.5% 29%;
+  animation: orb 30s linear infinite;
+}
+#herocentermain #orbs #Telescope {
+  position: absolute;
+  transform-origin: 33.5% 41%;
+  animation: orb 30s linear infinite;
+}
+#herocentermain #orbs #Repair {
+  position: absolute;
+  transform-origin: 66.5% 41%;
+  animation: orb 30s linear infinite;
+}
+#herocentermain #orbs #paint {
+  position: absolute;
+  transform-origin: 34.5% 60%;
+  animation: orb 30s linear infinite;
+}
+#herocentermain #orbs #compass {
+  position: absolute;
+  transform-origin: 51% 72%;
+  animation: orb 30s linear infinite;
+}
+@keyframes orb {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 #who {
