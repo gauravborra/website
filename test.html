@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <style>
+    html, body {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .hidden-l { display: block; } 
+      .hidden-m { display: none; } 
+    }
+
+    @media only screen and (min-width: 1025px) {
+      .hidden-l { display: none; }
+      .hidden-m { display: block; }
+    }
+  </style>
 </head>
+
 <body>
-    
+  <iframe class="hidden-m" 
+    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F4I7UfoZphbNGKE9hOz7QuV%2FClick-to-Claim%3Fnode-id%3D1%253A29%26scaling%3Dscale-down-width%26hotspot-hints%3D0&hide-ui=1"
+    allowfullscreen 
+    frameborder="0" 
+    width="100%" 
+    height="100%" 
+    scrolling="auto">
+  </iframe>
+
+  <iframe class="hidden-l" 
+    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F4I7UfoZphbNGKE9hOz7QuV%2FClick-to-Claim%3Fnode-id%3D1%253A4941%26scaling%3Dscale-down-width%26hotspot-hints%3D0&hide-ui=1"
+    allowfullscreen 
+    frameborder="0" 
+    width="100%" 
+    height="100%" 
+    scrolling="auto">
+  </iframe>
 </body>
 </html>

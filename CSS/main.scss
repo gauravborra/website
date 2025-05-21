@@ -27,14 +27,18 @@ html,body {
 }
 
 .framer-mask{
-  height: 44px;
+  height: 36px;
   width: 148px;
+  border-radius: 8px;
   position: fixed;
-  bottom: 15px;
+  bottom: 20px;
   right: 20px;
   background-image: url(/Assets/resume.svg);
+  background-repeat: no-repeat;
   z-index: 10;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
   cursor: pointer !important;
+  
 }
 
 #__framer-badge-container{
