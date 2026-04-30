@@ -1,8 +1,0 @@
-/*
- * mail (feather-icons/mail@0.0.29)
- *
- * Learn More: https://www.framer.com/asset-urls
- */
-
-export * from "https://framerusercontent.com/modules/FcL898BUo6qTfNRkMewL/IwKA5pdzufyef7aByBpm/mail.js"
-export { default } from "https://framerusercontent.com/modules/FcL898BUo6qTfNRkMewL/IwKA5pdzufyef7aByBpm/mail.js"
