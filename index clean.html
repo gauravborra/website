@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of product designer Gaurav Borra.">
+    <link rel="icon" type="image/png" href="/Assets/png/favicon.png">
+    <title>Gaurav Borra Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/main.css">
+  </head>
+
+  <body class="no-scroll">
+  <div id="preload">
+    <div id="introtext">
+      <h3>Hi, I am</h3>
+      <h1>Gaurav Borra</h1>
+      <p>I make memorable <br>Experiences</p>
+    </div>
+  </div>
+
+
+
+    <a
+      class="resume-strip"
+      href="/Assets/Resume-gauravborra.pdf"
+      target="_blank"
+      rel="noopener"
+      aria-label="Check out my resume"
+    ></a>
+
+<script>
+  const preload = document.getElementById("preload");
+
+  // Show preloader instantly (already visible)
+  
+  // Start transition after slight delay (not waiting for load)
+  setTimeout(() => {
+    preload.classList.add("preload-end"); // fade out (you already have CSS)
+  }, 800);
+
+  // Redirect AFTER animation completes
+  setTimeout(() => {
+    window.location.href = "/framer/";
+  }, 1400);
+</script>
+  </body>
+</html>

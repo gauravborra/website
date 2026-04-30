@@ -1,0 +1,8 @@
+/*
+ * chevron-up (feather-icons/chevron-up@0.0.29)
+ *
+ * Learn More: https://www.framer.com/asset-urls
+ */
+
+export * from "https://framerusercontent.com/modules/kdklviR3CRhz8wn3waWq/rgdUsVvfnUMDAyKoO9GO/chevron-up.js"
+export { default } from "https://framerusercontent.com/modules/kdklviR3CRhz8wn3waWq/rgdUsVvfnUMDAyKoO9GO/chevron-up.js"

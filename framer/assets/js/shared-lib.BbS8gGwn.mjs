@@ -1,0 +1,2 @@
+import{n as e}from"./rolldown-runtime.Cc88nRxQ.mjs";function t(e,t){return{description:`Portfolio of Gaurav Borra – 10 years of UX, HCI, and AI-driven design. Crafting intuitive, human-centered experiences and thoughtful digital solutions.`,favicon:`https://framerusercontent.com/assets/2TRFVsSelqM4eJHjZ3GJpy3JXE.png`,robots:`max-image-preview:large`,title:`gauravborra portfolio`}}var n=e((()=>{}));export{t as n,n as t};
+//# sourceMappingURL=shared-lib.BbS8gGwn.mjs.map
