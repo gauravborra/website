@@ -1,0 +1,437 @@
+<style>
+  #codex-preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 50% 44%, rgba(82, 112, 148, 0.16), rgba(10, 10, 11, 0) 34%),
+      radial-gradient(circle at 52% 110%, rgba(44, 66, 92, 0.16), rgba(10, 10, 11, 0) 36%),
+      #0A0A0B;
+    color: rgba(232, 238, 244, 0.64);
+    font-family: Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition:
+      transform 680ms cubic-bezier(0.76, 0, 0.24, 1),
+      opacity 420ms cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 680ms step-end;
+  }
+
+  #codex-preloader.codex-preloader--hidden {
+    opacity: 0.98;
+    transform: translateY(-100%);
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  #codex-preloader::before,
+  #codex-preloader::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  #codex-preloader::before {
+    opacity: 0.12;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.016) 1px, transparent 1px);
+    background-size: 100% 3px, 3px 100%;
+    mix-blend-mode: soft-light;
+  }
+
+  #codex-preloader::after {
+    opacity: 0.048;
+    background-image:
+      radial-gradient(circle at 18% 28%, rgba(255, 255, 255, 0.9) 0 1px, transparent 1px),
+      radial-gradient(circle at 72% 36%, rgba(255, 255, 255, 0.8) 0 1px, transparent 1px),
+      radial-gradient(circle at 42% 74%, rgba(255, 255, 255, 0.7) 0 1px, transparent 1px);
+    background-size: 71px 83px, 109px 127px, 151px 139px;
+    animation: codex-grain 4.8s steps(4, end) infinite;
+  }
+
+  .codex-runtime {
+    position: relative;
+    z-index: 1;
+    width: min(320px, calc(100vw - 56px));
+    transform: translateY(-2px);
+    opacity: 0.82;
+    transition: transform 680ms cubic-bezier(0.76, 0, 0.24, 1), opacity 360ms ease;
+    animation: codex-live 5.6s ease-in-out infinite;
+  }
+
+  #codex-preloader.codex-preloader--hidden .codex-runtime {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  .codex-runtime__header {
+    display: grid;
+    grid-template-columns: 6px minmax(0, 1fr);
+    column-gap: 10px;
+    row-gap: 6px;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  .codex-status-dot {
+    grid-row: 1 / span 2;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: #7FA5CA;
+    box-shadow: 0 0 14px rgba(127, 165, 202, 0.22);
+    animation: codex-pulse 1.9s ease-in-out infinite;
+    flex: 0 0 auto;
+  }
+
+  .codex-label {
+    color: rgba(226, 236, 246, 0.68);
+    font-size: 11px;
+    font-weight: 520;
+    letter-spacing: 0.14em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .codex-subtitle {
+    grid-column: 2;
+    color: rgba(196, 210, 224, 0.42);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    line-height: 1;
+  }
+
+  .codex-log {
+    --active-log: 0;
+    --log-row-height: 24px;
+    position: relative;
+    height: 76px;
+    overflow: hidden;
+    color: rgba(230, 237, 244, 0.56);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: var(--log-row-height);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 78%, transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 78%, transparent 100%);
+  }
+
+  .codex-log__track {
+    display: block;
+    width: 100%;
+    transform: translateY(calc((2 - var(--active-log)) * var(--log-row-height)));
+    transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+
+  .codex-log__row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: var(--log-row-height);
+    opacity: 0;
+    transform: translateY(2px);
+    transition:
+      opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .codex-log__row::before {
+    content: "›";
+    color: rgba(127, 165, 202, 0.42);
+    font-size: 12px;
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+
+  .codex-log__row.is-visible {
+    opacity: 0.24;
+    transform: translateY(0);
+  }
+
+  .codex-log__row.is-upcoming {
+    opacity: 0.1;
+    transform: translateY(0);
+  }
+
+  .codex-log__row.is-complete {
+    opacity: 0.18;
+  }
+
+  .codex-log__row.is-active {
+    opacity: 0.62;
+    transform: translateY(0);
+    animation: codex-row-live 3.4s ease-in-out infinite;
+  }
+
+  .codex-log__row.is-active::before {
+    color: rgba(154, 185, 216, 0.78);
+  }
+
+  .codex-progress {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    margin-top: 17px;
+    overflow: hidden;
+    background: rgba(169, 190, 210, 0.08);
+  }
+
+  .codex-progress__bar {
+    position: relative;
+    display: block;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(104, 132, 162, 0.24), rgba(178, 204, 229, 0.58));
+    box-shadow: 0 0 10px rgba(122, 151, 184, 0.1);
+    transform-origin: left center;
+    transition: width 360ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .codex-progress__bar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 38%;
+    background: linear-gradient(90deg, transparent, rgba(235, 244, 252, 0.32), transparent);
+    transform: translateX(-100%);
+    animation: codex-progress-live 2.8s ease-in-out infinite;
+  }
+
+  @keyframes codex-pulse {
+    0%, 100% {
+      opacity: 0.48;
+      transform: scale(0.82);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes codex-grain {
+    0%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    25% {
+      transform: translate3d(-1%, 1%, 0);
+    }
+
+    50% {
+      transform: translate3d(1%, -1%, 0);
+    }
+
+    75% {
+      transform: translate3d(1%, 1%, 0);
+    }
+  }
+
+  @keyframes codex-live {
+    0%, 100% {
+      opacity: 0.76;
+    }
+
+    50% {
+      opacity: 0.86;
+    }
+  }
+
+  @keyframes codex-row-live {
+    0%, 100% {
+      opacity: 0.58;
+    }
+
+    47% {
+      opacity: 0.65;
+    }
+
+    62% {
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes codex-progress-live {
+    0%, 28% {
+      opacity: 0;
+      transform: translateX(-120%);
+    }
+
+    58% {
+      opacity: 0.46;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(260%);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .codex-runtime {
+      width: min(280px, calc(100vw - 48px));
+    }
+
+    .codex-log {
+      font-size: 12px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #codex-preloader,
+    .codex-runtime,
+    .codex-log__track,
+    .codex-log__row,
+    .codex-progress__bar {
+      transition-duration: 160ms;
+    }
+
+    #codex-preloader::after,
+    .codex-runtime,
+    .codex-status-dot,
+    .codex-log__row.is-active,
+    .codex-progress__bar::after {
+      animation: none;
+    }
+
+    .codex-log__track {
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<div class="codex-runtime">
+  <div class="codex-runtime__header">
+    <span class="codex-status-dot" aria-hidden="true"></span>
+    <span class="codex-label">GAURAV BORRA</span>
+    <span class="codex-subtitle">Product Systems / Interface Design</span>
+  </div>
+  <div class="codex-log">
+      <span class="codex-log__track">
+        <span class="codex-log__row is-active">Initializing runtime</span>
+        <span class="codex-log__row">Loading portfolio</span>
+        <span class="codex-log__row">Ready</span>
+      </span>
+  </div>
+  <div class="codex-progress" aria-hidden="true">
+    <span class="codex-progress__bar"></span>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const body = document.body;
+    const preloader = document.getElementById('codex-preloader');
+    const frame = document.querySelector('.portfolio-frame');
+    const logViewport = preloader.querySelector('.codex-log');
+    const logRows = Array.from(preloader.querySelectorAll('.codex-log__row'));
+    const progressBar = preloader.querySelector('.codex-progress__bar');
+
+    const logDelays = [360];
+    const minVisibleTime = 2000;
+    const readyHold = 220;
+    const exitDuration = 680;
+    const startedAt = performance.now();
+    const readyIndex = Math.max(0, logRows.length - 1);
+    let currentLog = 0;
+    let dismissed = false;
+
+    if (!logViewport || logRows.length < 1 || !progressBar || !frame) {
+      body.classList.remove('no-scroll');
+      preloader.classList.add('codex-preloader--hidden');
+
+      if (frame && !frame.src && frame.dataset.src) {
+        frame.src = frame.dataset.src;
+      }
+
+      return;
+    }
+
+    progressBar.style.width = `${100 / logRows.length}%`;
+
+    function syncLogStates(activeIndex) {
+      logRows.forEach((row, rowIndex) => {
+        const distance = Math.abs(rowIndex - activeIndex);
+
+        row.classList.toggle('is-active', rowIndex === activeIndex);
+        row.classList.toggle('is-complete', rowIndex < activeIndex);
+        row.classList.toggle('is-visible', rowIndex <= activeIndex && distance <= 2);
+        row.classList.toggle('is-upcoming', rowIndex > activeIndex && distance <= 1);
+      });
+    }
+
+    function setLog(index) {
+      logViewport.style.setProperty('--active-log', index);
+      syncLogStates(index);
+      currentLog = index;
+      progressBar.style.width = `${((currentLog + 1) / logRows.length) * 100}%`;
+    }
+
+    syncLogStates(currentLog);
+
+    function waitForMinimumTime() {
+      const elapsed = performance.now() - startedAt;
+      const remaining = Math.max(0, minVisibleTime - elapsed);
+
+      return new Promise((resolve) => {
+        window.setTimeout(resolve, remaining);
+      });
+    }
+
+    async function tryRevealSite() {
+      if (dismissed) {
+        return;
+      }
+
+      await waitForMinimumTime();
+
+      if (dismissed) {
+        return;
+      }
+
+      setLog(readyIndex);
+
+      window.setTimeout(() => {
+        if (dismissed) {
+          return;
+        }
+
+        dismissed = true;
+        preloader.classList.add('codex-preloader--hidden');
+
+        window.setTimeout(() => {
+          if (!frame.src && frame.dataset.src) {
+            frame.src = frame.dataset.src;
+          }
+
+          body.classList.remove('no-scroll');
+          preloader.setAttribute('aria-hidden', 'true');
+        }, exitDuration);
+      }, readyHold);
+    }
+
+    function scheduleNextLog() {
+      if (currentLog >= readyIndex - 1) {
+        tryRevealSite();
+        return;
+      }
+
+      const delay = logDelays[currentLog] || 760;
+
+      window.setTimeout(() => {
+        setLog(currentLog + 1);
+        scheduleNextLog();
+      }, delay);
+    }
+    scheduleNextLog();
+  })();
+</script>
