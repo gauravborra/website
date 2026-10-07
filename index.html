@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="Portfolio of product designer Gaurav Borra.">
     <link rel="icon" type="image/png" href="/Assets/png/favicon.png">
     <title>Gaurav Borra Portfolio</title>
@@ -10,27 +10,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="/CSS/main.css?v=mobile-frame-1">
+    <script src="/JS/codex-preloader.js?v=mobile-frame-1" defer></script>
   </head>
 
-  <body class="no-scroll">
-    <!--
-    <div id="preload" aria-live="polite" aria-label="Loading portfolio">
-      <div id="introtext">
-        <h3>Hi, I am</h3>
-        <h1>Gaurav Borra</h1>
-        <p>I make Design Systems <br>Experiences</p>
-      </div>
-      <div class="loader" aria-hidden="true"></div>
-    </div>
-    -->
-
-    <!-- <div
+  <body class="portfolio-page">
+    <div
       id="codex-preloader"
-      data-component="/components/codex-preloader.html"
+      data-component="/Components/codex-preloader.html?v=mobile-frame-1"
+      role="status"
       aria-live="polite"
       aria-label="Loading portfolio"
-    ></div> -->
+    ></div>
 
     <iframe
       class="portfolio-frame"
@@ -50,30 +41,6 @@
       rel="noopener"
       aria-label="Check out my resume"
     ></a>
-
-  <!--
-  <script>
-  const body = document.body;
-  const preload = document.getElementById('preload');
-  const frame = document.querySelector('.portfolio-frame');
-
-  const minimumPreloaderTime = 3000; // 3 seconds
-  const startedAt = Date.now();
-
-  function hidePreloader() {
-    const elapsed = Date.now() - startedAt;
-    const remaining = Math.max(0, minimumPreloaderTime - elapsed);
-
-    setTimeout(() => {
-      preload.classList.add('preload-end');
-      body.classList.remove('no-scroll');
-    }, remaining);
-  }
-
-  frame.addEventListener('load', hidePreloader);
-</script>
--->
-  <script src="/JS/codex-preloader.js" defer></script>
 
   </body>
 </html>

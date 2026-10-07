@@ -17,12 +17,13 @@
   }
 
   function revealSite(fadeDuration = fallbackFadeDuration) {
+    body.classList.add('site-ready');
+    startSite();
     preloader.classList.add('codex-preloader--hidden');
     preloader.style.opacity = '0';
     preloader.style.pointerEvents = 'none';
 
     window.setTimeout(() => {
-      startSite();
       body.classList.remove('no-scroll');
       preloader.setAttribute('aria-hidden', 'true');
       preloader.style.visibility = 'hidden';
@@ -70,6 +71,11 @@
       failOpen();
     }
   }
+
+  // Keep component/network failures from trapping the site behind the intro.
+  window.setTimeout(() => {
+    if (!body.classList.contains('site-ready')) failOpen();
+  }, 8000);
 
   loadPreloader();
 })();
